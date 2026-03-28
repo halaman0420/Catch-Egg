@@ -1,5 +1,18 @@
 -- Catch a Monster | Light Mobile-Friendly Egg Collector
--- Type in chat: /egg on   /egg off   /egg stop
+-- Type in chat: /egg on    /egg off    /egg stop
+
+-- SUCCESS NOTIFICATION
+print([[ 
+---------------------------------
+✅ SCRIPT SUCCESSFULLY INJECTED!
+📱 Mobile Egg Script Ready!
+---------------------------------
+Chat commands: 
+/egg on  - Start collecting
+/egg off - Pause
+/egg stop - Stop
+---------------------------------
+]])
 
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
@@ -50,9 +63,6 @@ player.Chatted:Connect(function(msg)
         print("⛔ Egg collector STOPPED")
     end
 end)
-
-print("📱 Mobile Egg Script Ready!")
-print("Chat commands: /egg on | /egg off | /egg stop")
 
 while true do
     if _G.Running then
